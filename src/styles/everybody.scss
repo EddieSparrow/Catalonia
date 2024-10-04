@@ -50,6 +50,7 @@
     position: absolute;
     top: -4.6875vw;
     width: 100%;
+    pointer-events: none;
 
     @media (min-width: 1920px) {
       top: -4.8958vw;

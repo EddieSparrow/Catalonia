@@ -199,11 +199,14 @@
       gap: 4.1667vw;
     }
 
-    &-button {
+    &-button-1,
+    &-button-2,
+    &-button-3 {
       all: unset;
       font-family: 'Geometria';
       font-size: 1.3281vw;
       font-weight: bolder;
+      cursor: pointer;
     }
   }
 
@@ -233,5 +236,41 @@
       line-height: 1.45;
       top: 1.7vw;
     }
+  }
+}
+
+.button-container-1,
+.button-container-2,
+.button-container-3 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-image-1,
+.button-image-2,
+.button-image-3 {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: -1;
+}
+
+.button-container-1:hover {
+  .button-image-1 {
+    opacity: 1;
+  }
+}
+
+.button-container-2:hover {
+  .button-image-2 {
+    opacity: 1;
+  }
+}
+
+.button-container-3:hover {
+  .button-image-3 {
+    opacity: 1;
   }
 }

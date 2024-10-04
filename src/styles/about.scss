@@ -47,6 +47,11 @@
       font-size: calc(17px + 8.5 * (100vw - 1280px) / 640);
       text-decoration: underline;
       cursor: pointer;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
 
       &-arrow {
         width: 2.4vw;
@@ -132,6 +137,10 @@
     background-image: url('../assets/img/about_button.svg');
     background-repeat: no-repeat;
     background-size: contain;
+
+    &:hover {
+      background-image: url('../assets/img/about_button-hover.svg');
+    }
   }
 
   &__quote {
@@ -175,4 +184,9 @@
   height: 9vw;
   transform: translateX(38.3vw) translateY(13.7vw);
   background-color: #e33f00;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateX(38.3vw) translateY(13.7vw) scale(1.1);
+  }
 }

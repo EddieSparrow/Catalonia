@@ -144,6 +144,10 @@
     padding-right: 3.8vw;
     color: white;
     cursor: pointer;
+
+    &:hover {
+      background-image: url('../assets/img/learning_signin-hover.svg');
+    }
   }
 }
 
