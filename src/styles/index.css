@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Geometria';
+  font-size: 1.25vw;
+}
+
+ul {
+  list-style-type: none;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../fonts/Geometria-Bold.woff2') format('woff2'), url('../fonts/Geometria-Bold.woff') format('woff');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../fonts/Geometria-Regular.woff2') format('woff2'), url('../fonts/Geometria-Regular.woff') format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../fonts/Geometria-Medium.woff2') format('woff2'), url('../fonts/Geometria-Medium.woff') format('woff');
+  font-weight: bolder;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../fonts/Geometria-Light.woff2') format('woff2'), url('../fonts/Geometria-Light.woff') format('woff');
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../fonts/Geometria-LightItalic.woff2') format('woff2'), url('../fonts/Geometria-LightItalic.woff') format('woff');
+  font-weight: lighter;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'AlterBiomDemo';
+  src: url('../fonts/AlterBiomDemo.woff2') format('woff2'), url('../fonts/AlterBiomDemo.woff') format('woff');
+  font-weight: normal;
+}
+
+.h1 {
+  font-family: 'AlterBiomDemo';
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 9.79vw;
+}
+
+.h2 {
+  font-family: 'AlterBiomDemo';
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 2.9vw;
+}
+
+.circle {
+  all: unset;
+  display: flex;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.circle-text {
+  animation: rotate 5s linear infinite;
+  width: 7vw;
+}
+
+.circle-arrow {
+  position: absolute;
+  transform: translateY(0.15vw) translateX(0.67vw);
+  width: 2.1vw;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,36 @@
+.menu {
+  position: relative;
+  z-index: 1;
+  height: 2.8vw;
+  margin-top: 1.5vw;
+
+  &-bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    z-index: 1;
+  }
+
+  &-item {
+    display: flex;
+    width: 15%;
+    font-family: 'Geometria';
+    font-weight: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: calc(16px + (24 - 16) * ((100vw - 1280px) / (1920 - 1280)));
+    justify-content: center;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+}

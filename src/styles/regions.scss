@@ -1,0 +1,237 @@
+.regions {
+  display: flex;
+  position: relative;
+  width: 100vw;
+
+  &__bg {
+    position: absolute;
+    top: 5.1vw;
+    max-width: 25.5vw;
+    width: 100%;
+    height: auto;
+
+    @media (min-width: 1281px) {
+      top: 4.6vw;
+      max-width: 22.67vw;
+    }
+
+    @media (min-width: 1500px) {
+      top: 3.4vw;
+      max-width: 17vw;
+    }
+  }
+
+  &__maps {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    @media (max-width: 1440px) {
+      left: -9.375vw;
+      top: -3.8889vw;
+    }
+
+    @media (max-width: 1280px) {
+      left: -15.4688vw;
+      top: -10.5469vw;
+    }
+  }
+
+  &__map {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    top: 13.2vw;
+    left: 21.3vw;
+
+    @media (min-width: 1281px) {
+      top: 11.7vw;
+      left: 18.9vw;
+      max-width: 37vw;
+    }
+
+    @media (min-width: 1500px) {
+      top: 8.99vw;
+      left: 14.1vw;
+      max-width: 28vw;
+    }
+
+    &-1,
+    &-2,
+    &-3,
+    &-4 {
+      fill: #aecff04d;
+    }
+  }
+
+  &__fly-1,
+  &__fly-2,
+  &__fly-3,
+  &__fly-4 {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    gap: 7.99px;
+
+    @media (min-width: 1500px) {
+      width: 1.8vw;
+    }
+
+    img {
+      width: 2vw;
+    }
+
+    p {
+      position: relative;
+      font-family: 'Geometria';
+      font-weight: 500;
+      font-size: 14px;
+      margin-top: 2px;
+    }
+  }
+
+  &__fly-1 {
+    left: 26.2437vw;
+    top: 34.5375vw;
+
+    @media (min-width: 1281px) {
+      left: 23.2vw;
+      top: 34.5375vw - 3.8889vw;
+    }
+
+    @media (min-width: 1500px) {
+      left: 17.45vw;
+      top: 22.99vw;
+    }
+  }
+
+  &__fly-2 {
+    left: 50.743vw;
+    top: 25.5531vw;
+
+    @media (min-width: 1281px) {
+      left: 45vw;
+      top: 22.5vw;
+    }
+
+    @media (min-width: 1500px) {
+      left: 33.77vw;
+      top: 16.99vw;
+    }
+  }
+
+  &__fly-3 {
+    left: 27.4922vw;
+    top: 44.3031vw;
+
+    @media (min-width: 1281px) {
+      left: 24.3vw;
+      top: 39.25vw;
+    }
+
+    @media (min-width: 1500px) {
+      left: 18.3vw;
+      top: 29.45vw;
+    }
+  }
+
+  &__fly-4 {
+    left: 46.6078vw;
+    top: 38.5219vw;
+
+    @media (min-width: 1281px) {
+      left: 41.3vw;
+      top: 34.2vw;
+    }
+
+    @media (min-width: 1500px) {
+      left: 31vw;
+      top: 25.6vw;
+    }
+
+    p {
+      right: 124px;
+    }
+  }
+
+  &__description {
+    padding-top: 5.39vw;
+    padding-left: 9.5vw;
+
+    @media (min-width: 1500px) {
+      padding-top: 5.2vw;
+      padding-right: 4.8vw;
+    }
+
+    @media (max-width: 1440px) {
+      padding-top: 9.6vw;
+      padding-right: 4.4444vw;
+    }
+
+    @media (max-width: 1280px) {
+      padding-top: 4.8vw;
+      padding-right: 4.4444vw;
+    }
+  }
+
+  &__description-title {
+    font-family: 'AlterBiomDemo';
+    font-weight: 400;
+    font-size: 2.8906vw;
+    text-transform: uppercase;
+    width: 36.6406vw;
+    margin-bottom: 1.3281vw;
+  }
+
+  &__description-text {
+    font-weight: lighter;
+    font-size: 1.3281vw;
+    width: 36.4063vw;
+    line-height: 1.9vw;
+  }
+
+  &__buttons {
+    display: flex;
+    margin-top: 4vw;
+    gap: 4vw;
+    text-wrap: nowrap;
+    @media (max-width: 1440px) {
+      gap: 4.1667vw;
+    }
+
+    &-button {
+      all: unset;
+      font-family: 'Geometria';
+      font-size: 1.3281vw;
+      font-weight: bolder;
+    }
+  }
+
+  &__hint {
+    position: relative;
+    width: 14.5833vw;
+    font-weight: lighter;
+    font-size: 1.3281vw;
+    background: url(../assets/img/regions_hint-bg.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 7.7344vw;
+    margin-top: 7.15vw;
+    left: 9.85vw;
+
+    &-arrow {
+      position: absolute;
+      top: -4.669vw;
+      left: -9.9vw;
+      width: 8.8281vw;
+    }
+
+    &-text {
+      position: relative;
+      left: 2vw;
+      line-height: 1.45;
+      top: 1.7vw;
+    }
+  }
+}

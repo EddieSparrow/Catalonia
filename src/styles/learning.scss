@@ -1,0 +1,153 @@
+.learning {
+  display: flex;
+  flex-direction: column;
+
+  &__webinars-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5625vw;
+
+    @media (max-width: 1280px) {
+      gap: 1.1719vw;
+    }
+  }
+
+  &__hr {
+    width: 161.5%;
+    border: 1.5px solid black;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 4.07vw;
+  }
+
+  &-description {
+    font-size: 1.3281vw;
+    margin-top: 1.6vw;
+    padding: 0 24.8vw 0 24.7vw;
+    text-align: center;
+    line-height: 1.77vw;
+  }
+
+  &__webinar {
+    position: relative;
+    margin: 0 6.875vw 0 6.875vw;
+    box-shadow: 6px 7.5px 15px 4.5px rgb(9, 11, 70, 7%);
+
+    &-date {
+      position: absolute;
+      top: 1.5vw;
+      left: 2.1vw;
+    }
+
+    &-bg {
+      position: absolute;
+      width: 100%;
+      pointer-events: none;
+    }
+  }
+
+  &__info {
+    display: flex;
+    padding: 8.5vw 2.4vw 2.6vw 1.86vw;
+
+    &-time {
+      font-family: 'AlterBiomDemo';
+      font-size: 2.5781vw;
+    }
+
+    &-zone {
+      font-family: 'AlterBiomDemo';
+      font-size: 1.0938vw;
+      margin-left: 0.7vw;
+    }
+  }
+
+  &__content {
+    margin: 0 5.8594vw 0 3.2813vw;
+
+    &-description {
+      font-weight: lighter;
+      font-style: normal;
+      font-size: 1.0938vw;
+      width: 43.125vw;
+    }
+
+    &-program {
+      all: unset;
+      font-size: 1.0938vw;
+      font-weight: normal;
+      color: #e33f00;
+      margin: 1.4063vw 0 1.9vw 0;
+      cursor: pointer;
+    }
+
+    &-program:hover {
+      color: #c4c4c4;
+    }
+  }
+
+  &__experts {
+    display: flex;
+    gap: 2.775vw;
+  }
+
+  &__expert {
+    &-container {
+      display: flex;
+      margin-top: 2.0313vw;
+      margin-left: -0.15vw;
+      gap: 1.0156vw;
+      width: 19.9219vw;
+    }
+
+    &-title {
+      margin-top: 2.2vw;
+      font-weight: bolder;
+      font-size: 1.24vw;
+    }
+
+    &-photo {
+      width: 4.4531vw;
+      height: 4.5313vw;
+      margin-top: 0.22vw;
+    }
+
+    &-name {
+      font-weight: normal;
+      font-size: 1.25vw;
+      margin-bottom: 0.2vw;
+    }
+
+    &-description {
+      font-weight: lighter;
+      font-size: 1.0938vw;
+    }
+  }
+
+  &__button-signin {
+    all: unset;
+    text-align: center;
+    background-image: url('../assets/img/learning_signin.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 20.625vw;
+    height: 4.064vw;
+    margin-top: -0.4236vw;
+    font-size: 1.4063vw;
+    text-transform: uppercase;
+    padding-right: 3.8vw;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.h2.learning {
+  color: #ffff;
+  font-size: 1.7969vw;
+}
