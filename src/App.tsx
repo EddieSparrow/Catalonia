@@ -8,6 +8,8 @@ import './styles/features.scss';
 import './styles/ranking.scss';
 import './styles/footer.scss';
 
-function App() {}
+function App() {
+  return <></>;
+}
 
 export default App;
