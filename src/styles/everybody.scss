@@ -5,10 +5,9 @@
   align-items: center;
   margin-top: 8vw;
   position: relative;
-  min-height: 733px;
 
   @media (min-width: 1920px) {
-    transform: translateY(60px);
+    margin-top: 213px;
   }
 
   &__family-button,
@@ -74,6 +73,7 @@
 
   &__images {
     display: flex;
+    width: 100%;
 
     &__new-rest {
       position: relative;

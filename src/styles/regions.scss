@@ -1,7 +1,7 @@
 .regions {
   display: flex;
   position: relative;
-  width: 100vw;
+  width: 100%;
 
   &__bg {
     position: absolute;
@@ -255,6 +255,10 @@
   opacity: 0;
   transition: opacity 0.2s ease;
   z-index: -1;
+
+  @media (min-width: 1600px) {
+    transform: scale(1.5);
+  }
 }
 
 .button-container-1:hover {

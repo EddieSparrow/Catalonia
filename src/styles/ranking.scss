@@ -1,0 +1,86 @@
+.ranking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  &-description {
+    font-size: 1.25rem;
+    margin-top: 0.9375vw;
+  }
+
+  &__bg {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+
+  &__table {
+    position: relative;
+    width: 86.25vw;
+    height: 40.625vw;
+    margin-top: 3.4375vw;
+    box-shadow: 6px 7.5px 15px 4.5px rgb(9, 11, 70, 7%);
+  }
+
+  &__title {
+    font-size: 1.125rem;
+  }
+
+  &__description {
+    font-size: 0.9375rem;
+    font-weight: 700;
+
+    &-link {
+      color: black;
+    }
+  }
+
+  &__info {
+    display: flex;
+    padding: 2.3438vw 7.1094vw;
+    font-weight: 400;
+    gap: 8.75vw;
+  }
+
+  &__leaderboard {
+    padding: 1.6406vw 1.875vw;
+
+    &-li {
+      display: flex;
+      align-items: center;
+    }
+
+    &-rank {
+      font-size: 1.875rem;
+      font-family: 'AlterBiomDemo';
+      margin-right: 3.2813vw;
+    }
+
+    &-name {
+      font-size: 1.125rem;
+      margin-right: 17.9688vw;
+    }
+
+    &-company {
+      font-size: 1.125rem;
+      color: #acacac;
+      margin-right: 17.0703vw;
+    }
+
+    &-score {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+  }
+
+  &__pagination {
+    position: relative;
+    pointer-events: none;
+    width: 29.4141vw;
+    height: 6.8359vw;
+    bottom: 2.5781vw;
+    right: 0.2344vw;
+    z-index: 1;
+  }
+}

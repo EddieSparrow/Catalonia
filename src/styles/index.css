@@ -95,3 +95,13 @@ ul {
     transform: rotate(360deg);
   }
 }
+
+.bg {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+}
+
+.link {
+  text-decoration: none;
+}
