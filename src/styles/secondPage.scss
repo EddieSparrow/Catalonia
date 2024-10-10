@@ -1,0 +1,111 @@
+.second-page-wrapper {
+  font-size: 1.0625rem;
+  line-height: 24.65px;
+}
+
+.section-1 {
+  position: relative;
+  bottom: 11.7969vw;
+  height: 27.3438vw;
+
+  &__text {
+    position: relative;
+    width: 41.0156vw;
+    font-size: 1.0625rem;
+    margin-left: 41.0938vw;
+    transform: translateY(11.0938vw);
+    line-height: 24.65px;
+  }
+}
+
+.section-2 {
+  height: 37.5vw;
+
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__text {
+    width: 47.1875vw;
+
+    &-2 {
+      width: 48.3594vw;
+    }
+  }
+}
+
+.section-3 {
+  height: 38.9063vw;
+
+  &__text {
+    width: 41.0156vw;
+  }
+}
+
+.section-4 {
+  height: 39.1406vw;
+
+  &__text {
+    width: 47.1875vw;
+  }
+}
+
+.footer {
+  height: 33.5156vw;
+}
+
+.circle.second-circle {
+  width: 9.9vw;
+  height: 9.9vw;
+  background-color: #fee629;
+  transition: transform 0.2s ease;
+  transform: translateX(41.7969vw) translateY(20.2344vw);
+}
+
+.text-with-quote {
+  display: flex;
+  gap: 16px;
+  line-height: 24.65px;
+}
+
+.qoute {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin-left: 4.4531vw;
+  transform: translateY(0.2344vw);
+}
+
+.open {
+  transform: translateX(0.1563vw) translateY(0.5469vw);
+}
+
+.close {
+  color: rgba(225, 225, 225, 1);
+  transform: translateX(-0.3125vw) translateY(14.2969vw);
+}
+
+.quote-mark {
+  font-family: 'AlterBiomDemo';
+  font-size: 6.4375rem;
+}
+
+.img-michail {
+  width: 6.4844vw;
+  height: 6.4844vw;
+}
+
+.qoute-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 28px;
+  margin-left: 2.9688vw;
+  top: 0.4688vw;
+}
+
+.second-wrapper {
+  transform: translateY(0.4688vw);
+}
