@@ -195,6 +195,9 @@
     margin-top: 4vw;
     gap: 4vw;
     text-wrap: nowrap;
+    z-index: 1;
+    position: relative;
+
     @media (max-width: 1440px) {
       gap: 4.1667vw;
     }
@@ -222,6 +225,7 @@
     height: 7.7344vw;
     margin-top: 7.15vw;
     left: 9.85vw;
+    z-index: -2;
 
     &-arrow {
       position: absolute;
@@ -235,6 +239,59 @@
       left: 2vw;
       line-height: 1.45;
       top: 1.7vw;
+    }
+  }
+
+  &__modal {
+    position: absolute;
+    transform: translateY(-18.75vw);
+    height: 24.2969vw;
+    background-image: url('/src/assets/img/regions-modal.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 54.6875vw;
+    right: -58.0156vw;
+    transition: right 0.1s ease;
+
+    &-bullet {
+      opacity: 0;
+    }
+
+    &-bg {
+      position: absolute;
+      z-index: -1;
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      position: absolute;
+      padding: 6.875vw 3.5937vw;
+      width: 500px;
+    }
+
+    &-text-container {
+      display: flex;
+      gap: 13px;
+      cursor: pointer;
+    }
+
+    &-text-container:hover {
+      p {
+        font-weight: bold;
+      }
+    }
+
+    &-text-container:focus {
+      p {
+        font-weight: bold;
+      }
+
+      .regions__modal-bullet {
+        opacity: 1;
+      }
     }
   }
 }
@@ -277,4 +334,10 @@
   .button-image-3 {
     opacity: 1;
   }
+}
+
+.modal-wrapper {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }

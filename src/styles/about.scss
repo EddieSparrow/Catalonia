@@ -2,6 +2,11 @@
   position: relative;
   top: -8.5vw;
 
+  &__image-wrapper {
+    display: flex;
+    transform: translateX(2vw);
+  }
+
   &__what-wait {
     position: relative;
     height: 42.6vw;
@@ -189,4 +194,8 @@
   &:hover {
     transform: translateX(38.3vw) translateY(13.7vw) scale(1.1);
   }
+}
+
+.md-size {
+  height: 100%;
 }
