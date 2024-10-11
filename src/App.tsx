@@ -8,6 +8,7 @@ import './styles/features.scss';
 import './styles/ranking.scss';
 import './styles/footer.scss';
 import './styles/secondPage.scss';
+import './styles/testPage.scss';
 
 function App() {
   return <></>;
