@@ -1,34 +1,22 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { viteStaticCopy } from 'vite-plugin-static-copy';
+import { resolve } from 'path';
 
 export default defineConfig({
   base: './',
-  plugins: [
-    react(),
-    viteStaticCopy({
-      targets: [
-        {
-          src: 'src/public/secondPage.html',
-          dest: '',
-          transform: (contents) => {
-            return contents.toString().replace(/\.(\/src\/public\/)/g, './');
-          },
-        },
-        {
-          src: 'src/public/testPage.html',
-          dest: '',
-          transform: (contents) => {
-            return contents.toString().replace(/\.(\/src\/public\/)/g, './');
-          },
-        },
-      ],
-    }),
-  ],
+  plugins: [react()],
   css: {
     preprocessorOptions: {
       scss: {
         additionalData: `@import "./src/styles/index.css";`,
+      },
+    },
+  },
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        secondPage: resolve(__dirname, 'src/public/secondPage.html'),
       },
     },
   },
