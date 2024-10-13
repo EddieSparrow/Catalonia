@@ -6,19 +6,21 @@ import './styles/index.css';
 ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode>{<App />}</React.StrictMode>);
 
 const focusButtons = document.querySelectorAll('.button-container-1, .button-container-2, .button-container-3');
-const mapPoints = document.querySelectorAll('.map-point');
-const mapPointContainer = document.querySelector('.regions__points');
-const modal = document.querySelector('.regions__modal');
-const mapContainer = document.querySelectorAll('.regions__map-1, .regions__map-2, .regions__map-3, .regions__map-4');
+const mapPoints = document.querySelectorAll('.map-point') as NodeListOf<HTMLElement>;
+const mapPointContainer = document.querySelector('.regions__points') as HTMLElement;
+const modal = document.querySelector('.regions__modal') as HTMLElement;
+const mapContainer = document.querySelectorAll('.regions__map-1, .regions__map-2, .regions__map-3, .regions__map-4') as NodeListOf<HTMLElement>;
 const defaultMapFill = 'rgba(174, 207, 240, 0.3019607843)';
-const flys = document.querySelector('.regions__flys');
+const flys = document.querySelector('.regions__flys') as HTMLElement;
 
 focusButtons.forEach((button) => {
   button.addEventListener('click', () => {
-    hideAllPoints();
-    modal.style.right = '-0.0156vw';
-    flys.style.opacity = 0;
-    mapPointContainer.style.opacity = 1;
+    if (modal && flys && mapPointContainer) {
+      hideAllPoints();
+      modal.style.right = '-0.0156vw';
+      flys.style.opacity = '0';
+      mapPointContainer.style.opacity = '1';
+    }
   });
 });
 
@@ -50,43 +52,49 @@ focusButtons[2].addEventListener('click', () => {
 });
 
 document.addEventListener('click', (event) => {
-  if (!modal.contains(event.target) && !Array.from(focusButtons).some((button) => button.contains(event.target))) {
-    hideAllPoints();
-    modal.style.right = '-58.0156vw';
-    flys.style.opacity = 1;
-    mapPointContainer.style.opacity = 0;
-    mapContainer.forEach((map) => {
-      map.style.fill = defaultMapFill;
-    });
+  if (!modal.contains(event.target as HTMLElement) && !Array.from(focusButtons).some((button) => button.contains(event.target as HTMLElement))) {
+    if (modal && flys && mapPointContainer) {
+      hideAllPoints();
+      modal.style.right = '-58.0156vw';
+      flys.style.opacity = '1';
+      mapPointContainer.style.opacity = '0';
+      mapContainer.forEach((map) => {
+        map.style.fill = defaultMapFill;
+      });
+    }
   }
 });
 
 function hideAllPoints() {
   document.querySelectorAll('.map-point').forEach((point) => {
-    point.style.opacity = 0;
+    (point as HTMLElement).style.opacity = '0';
   });
 }
 
-const buttonCity1 = document.querySelector('.modal-city-1');
-const pointCity1 = document.querySelector('.map-point-1');
+const buttonCity1 = document.querySelector('.modal-city-1') as HTMLElement;
+const pointCity1 = document.querySelector('.map-point-1') as HTMLElement;
 buttonCity1?.addEventListener('click', () => {
   hideAllPoints();
-  pointCity1.style.opacity = 1;
+  if (pointCity1) {
+    pointCity1.style.opacity = '1';
+  }
 });
 
-const buttonCity2 = document.querySelector('.modal-city-2');
-const pointCity2 = document.querySelector('.map-point-2');
+const buttonCity2 = document.querySelector('.modal-city-2') as HTMLElement;
+const pointCity2 = document.querySelector('.map-point-2') as HTMLElement;
 buttonCity2?.addEventListener('click', () => {
   hideAllPoints();
-  pointCity2.style.opacity = 1;
+  if (pointCity2) {
+    pointCity2.style.opacity = '1';
+  }
 });
 
-const imageContainer = document.querySelector('.about__image-wrapper');
-const circleAbout = document.querySelector('.circle.about');
+const imageContainer = document.querySelector('.about__image-wrapper') as HTMLElement;
+const circleAbout = document.querySelector('.circle.about') as HTMLElement;
 let curreentTranslate = 0;
 let countTranslate = 0;
 
-circleAbout.addEventListener('click', () => {
+circleAbout?.addEventListener('click', () => {
   countTranslate += 1;
   if (countTranslate === 1) {
     curreentTranslate -= 42.4375;
@@ -96,17 +104,23 @@ circleAbout.addEventListener('click', () => {
     curreentTranslate = 2;
     countTranslate = 0;
   }
-  imageContainer.style.transform = `translateX(${curreentTranslate}vw)`;
+  if (imageContainer) {
+    imageContainer.style.transform = `translateX(${curreentTranslate}vw)`;
+  }
 });
 
-const rulesButton = document.querySelector('.about__what-wait-button');
-const rulesModal = document.querySelector('.rules-modal');
-const closeRulesButton = document.querySelector('.rules-close-button');
-let closedRightModal = '-10px';
-let openRightModal = '-100vw';
+const rulesButton = document.querySelector('.about__what-wait-button') as HTMLElement;
+const rulesModal = document.querySelector('.rules-modal') as HTMLElement;
+const closeRulesButton = document.querySelector('.rules-close-button') as HTMLElement;
+const closedRightModal = '-10px';
+const openRightModal = '-100vw';
 rulesButton?.addEventListener('click', () => {
-  rulesModal.style.right = closedRightModal;
+  if (rulesModal) {
+    rulesModal.style.right = closedRightModal;
+  }
 });
 closeRulesButton?.addEventListener('click', () => {
-  rulesModal.style.right = openRightModal;
+  if (rulesModal) {
+    rulesModal.style.right = openRightModal;
+  }
 });
