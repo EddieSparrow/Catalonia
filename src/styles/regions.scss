@@ -64,6 +64,15 @@
     }
   }
 
+  &__points {
+    position: absolute;
+    left: 23.7656vw;
+    top: 16.7969vw;
+    opacity: 1;
+    z-index: 10;
+    width: 100%;
+  }
+
   &__fly-1,
   &__fly-2,
   &__fly-3,
@@ -340,4 +349,52 @@
   overflow: hidden;
   width: 100%;
   height: 100%;
+}
+
+.city-1 {
+  position: absolute;
+  color: black;
+  font-size: 1.0625rem;
+  font-weight: bold;
+  left: 17.5vw;
+  top: 7.6563vw;
+}
+
+.map-point-2 {
+  position: absolute;
+  left: 5.7188vw;
+  top: 12.7188vw;
+}
+
+.map-point {
+  opacity: 0;
+}
+
+.map-point-1 {
+  position: absolute;
+  left: 19.7188vw;
+  top: 6.7188vw;
+  opacity: 0;
+}
+
+.map-point-arrow {
+  transform: translateX(11.25vw) translateY(-0.3125vw);
+}
+
+.map-point-city {
+  color: black;
+  font-size: 1.0625rem;
+  font-weight: bold;
+  width: auto;
+  height: auto;
+  text-align: center;
+}
+
+.point-bg {
+  width: 100%;
+  height: 100%;
+  background: url('/src/assets/img/region_point-bg.svg') no-repeat center;
+  background-size: contain;
+  display: inline-block;
+  padding: 8px 16px;
 }
