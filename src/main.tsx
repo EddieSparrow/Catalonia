@@ -63,3 +63,15 @@ circleAbout.addEventListener('click', () => {
   }
   imageContainer.style.transform = `translateX(${curreentTranslate}vw)`;
 });
+
+const rulesButton = document.querySelector('.about__what-wait-button');
+const rulesModal = document.querySelector('.rules-modal');
+const closeRulesButton = document.querySelector('.rules-close-button');
+let closedRightModal = '-10px';
+let openRightModal = '-100vw';
+rulesButton?.addEventListener('click', () => {
+  rulesModal.style.right = closedRightModal;
+});
+closeRulesButton?.addEventListener('click', () => {
+  rulesModal.style.right = openRightModal;
+});
