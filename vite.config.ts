@@ -11,12 +11,16 @@ export default defineConfig({
         {
           src: 'src/public/secondPage.html',
           dest: '',
-          rename: 'secondPage.html',
+          transform: (contents) => {
+            return contents.toString().replace(/\.(\/src\/public\/)/g, './');
+          },
         },
         {
           src: 'src/public/testPage.html',
           dest: '',
-          rename: 'testPage.html',
+          transform: (contents) => {
+            return contents.toString().replace(/\.(\/src\/public\/)/g, './');
+          },
         },
       ],
     }),
@@ -25,18 +29,6 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: `@import "./src/styles/index.css";`,
-      },
-    },
-  },
-  build: {
-    rollupOptions: {
-      output: {
-        assetFileNames: (assetInfo) => {
-          if (assetInfo.name === 'secondPage.html' || assetInfo.name === 'testPage.html') {
-            return 'pages/[name].[ext]';
-          }
-          return 'assets/[name].[ext]';
-        },
       },
     },
   },
