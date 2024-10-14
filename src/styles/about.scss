@@ -4,7 +4,7 @@
 
   &__image-wrapper {
     display: flex;
-    transform: translateX(2vw);
+    position: absolute;
   }
 
   &__what-wait {
@@ -88,6 +88,8 @@
     }
 
     &-container {
+      position: relative;
+      top: 43.5938vw;
       transform: translateY(-16vw) translateX(11%);
       width: 36vw;
     }
@@ -197,7 +199,8 @@
 }
 
 .md-size {
-  height: 100%;
+  width: 43.9892vw;
+  height: 43.2092vw;
 }
 
 .rules {

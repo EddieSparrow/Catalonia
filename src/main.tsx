@@ -97,11 +97,11 @@ let countTranslate = 0;
 circleAbout?.addEventListener('click', () => {
   countTranslate += 1;
   if (countTranslate === 1) {
-    curreentTranslate -= 42.4375;
+    curreentTranslate -= 44.4375;
   } else if (countTranslate === 2) {
     curreentTranslate -= 43.4375;
   } else {
-    curreentTranslate = 2;
+    curreentTranslate = 0;
     countTranslate = 0;
   }
   if (imageContainer) {
