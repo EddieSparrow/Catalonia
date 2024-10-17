@@ -11,7 +11,7 @@ pages.forEach((page) => {
 });
 
 export default defineConfig({
-  base: '/',
+  base: './',
   build: {
     target: 'es2017',
     outDir: 'build',
