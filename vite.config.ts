@@ -1,23 +1,34 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { resolve } from 'path';
+import { ViteAliases } from 'vite-aliases';
+import legacy from '@vitejs/plugin-legacy';
+import pages from './vitejs/pages.config';
+
+const pagesInput: { [key: string]: string } = {};
+
+pages.forEach((page) => {
+  pagesInput[page.name] = page.path;
+});
 
 export default defineConfig({
-  base: './',
-  plugins: [react()],
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `@import "./src/styles/index.css";`,
-      },
-    },
-  },
+  base: '/',
   build: {
+    target: 'es2017',
+    outDir: 'build',
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
-        secondPage: resolve(__dirname, 'src/public/secondPage.html'),
+        ...pagesInput,
       },
     },
   },
+  server: {
+    port: 3000,
+    host: '0.0.0.0',
+    hmr: true,
+  },
+  plugins: [
+    ViteAliases(),
+    legacy({
+      targets: ['defaults', 'not IE 11'],
+    }),
+  ],
 });
