@@ -6,46 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Catalonia</title>
     <script type="module" crossorigin src="../../assets/test-WurUarZa.js"></script>
-    <link rel="modulepreload" crossorigin href="../../assets/main-CfA4VSxX.js" />
-    <link rel="stylesheet" crossorigin href="../../assets/main-Ci5BOaEJ.css" />
-    <script type="module">
-      import.meta.url;
-      import('_').catch(() => 1);
-      (async function* () {})().next();
-      if (location.protocol != 'file:') {
-        window.__vite_is_modern_browser = true;
-      }
-    </script>
-    <script type="module">
-      !(function () {
-        if (window.__vite_is_modern_browser) return;
-        console.warn('vite: loading legacy chunks, syntax error above and the same error below should be ignored');
-        var e = document.getElementById('vite-legacy-polyfill'),
-          n = document.createElement('script');
-        (n.src = e.src),
-          (n.onload = function () {
-            System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'));
-          }),
-          document.body.appendChild(n);
-      })();
-    </script>
+    <link rel="modulepreload" crossorigin href="../../assets/main-CfA4VSxX.js">
+    <link rel="stylesheet" crossorigin href="../../assets/main-Ci5BOaEJ.css">
+    <script type="module">import.meta.url;import("_").catch(()=>1);(async function*(){})().next();if(location.protocol!="file:"){window.__vite_is_modern_browser=true}</script>
+    <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
   </head>
   <body>
     <div class="test-page-wrapper">
-      <img class="menu-bg" src="data:image/svg+xml,%3csvg%20width='1920'%20height='97'%20viewBox='0%200%201920%2097'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M431.25%2075L-9.75%2096.75L-33%2087V-97.5L1936.5%20-44.25V33.75L1953.75%2087L1677.75%2075L1233.75%2087L431.25%2075Z'%20fill='white'/%3e%3c/svg%3e" loading="lazy" />
+      <img class="menu-bg" src="./src/assets/menu-bg.svg" loading="lazy" />
       <nav class="menu">
         <ul class="menu-list">
-          <li class="menu-item"><a href="/Catalonia/index.html#about">О Каталонии</a></li>
-          <li class="menu-item"><a href="index.html##learning">Вебинары</a></li>
-          <li class="menu-item"><a href="index.html##regions">Карта</a></li>
-          <li class="menu-item"><a href="index.html##everybody">Кому подойдет</a></li>
-          <li class="menu-item"><a href="index.html##features">Гранд Тур</a></li>
-          <li class="menu-item"><a href="index.html##ranking">Бизнес-партнеры</a></li>
+          <li class="menu-item"><a href="/index.html#about">О Каталонии</a></li>
+          <li class="menu-item"><a href="/index.html##learning">Вебинары</a></li>
+          <li class="menu-item"><a href="/index.html##regions">Карта</a></li>
+          <li class="menu-item"><a href="/index.html##everybody">Кому подойдет</a></li>
+          <li class="menu-item"><a href="/index.html##features">Гранд Тур</a></li>
+          <li class="menu-item"><a href="/index.html##ranking">Бизнес-партнеры</a></li>
           <li class="menu-item"><a href="#test">Тест</a></li>
         </ul>
       </nav>
       <header class="header second-header">
-        <img class="test-bg" src="../../assets/bg-header-CEemwuI5.svg" loading="lazy" />
+        <img class="test-bg" src="./src/assets/img/testpage/bg-header.svg" loading="lazy" />
         <div class="header-intro">
           <h1 class="header__title">
             Проверяйте<br />
@@ -55,14 +36,14 @@
         </div>
         <a href="#test">
           <button class="second-circle circle">
-            <img class="circle-text header" src="../../assets/header_circle-C-d-FLY0.svg" loading="lazy" />
-            <img class="circle-arrow header" src="data:image/svg+xml,%3csvg%20width='24'%20height='27'%20viewBox='0%200%2024%2027'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M10.9859%200.07901V21.5839C10.3662%2020.238%209.61564%2019.1284%208.63384%2018.25C6.70051%2016.5202%204.00499%2015.8008%200.0816885%2015.6785L0.0342789%2017.2004C3.83335%2017.3187%206.0861%2018.0135%207.61862%2019.3846C9.16946%2020.7722%2010.1177%2022.9673%2011.0098%2026.4449L11.8861%2026.3343L12.7625%2026.4449C13.6545%2022.9673%2014.6028%2020.7722%2016.1536%2019.3846C17.6861%2018.0135%2019.9389%2017.3187%2023.7379%2017.2004L23.6905%2015.6785C19.7672%2015.8008%2017.0717%2016.5202%2015.1384%2018.25C14.1566%2019.1284%2013.406%2020.238%2012.7863%2021.5839V0.07901H12.5084H11.2638H10.9859Z'%20fill='black'/%3e%3c/svg%3e" loading="lazy" />
+            <img class="circle-text header" src="./src/assets/img/header_circle.svg" loading="lazy" />
+            <img class="circle-arrow header" src="./src/assets/header-arrow.svg" loading="lazy" />
           </button>
         </a>
       </header>
 
       <section id="test" class="test1">
-        <img class="test-bg" src="../../assets/bg-1-Br8_dNHo.svg" />
+        <img class="test-bg" src="./src/assets/img/testpage/bg-1.svg" />
         <div class="test-wrapper">
           <div class="test-question">
             <p><b>Какой пляж, граничащий с холмами, покрытыми вечнозелеными соснами, получил название «Скалистый»?</b></p>
@@ -92,7 +73,7 @@
       </section>
 
       <section class="test2">
-        <img class="test-bg" src="../../assets/bg-2-Hgudc7-B.svg" />
+        <img class="test-bg" src="./src/assets/img/testpage/bg-2.svg" />
         <div class="test-wrapper-2">
           <div class="test-question">
             <p><b>Что такое Festa Major?</b></p>
@@ -131,7 +112,7 @@
       </section>
 
       <footer class="footer">
-        <img class="footer-bg" src="../../assets/footer-bg-B4uJllzB.svg" />
+        <img class="footer-bg" src="./src/assets/img/testpage/footer-bg.svg" />
         <div class="footer__fedback">
           <p class="footer__fedback-title">Уважаемые участники!</p>
           <p class="footer__fedback-description">Мы будем рады ответить на любые вопросы о проекте. Пишите нам на почту: <a href="mailto:academy@profi.travel">academy@profi.travel</a></p>
@@ -145,32 +126,9 @@
         </div>
       </footer>
     </div>
-
-    <script nomodule>
-      !(function () {
-        var e = document,
-          t = e.createElement('script');
-        if (!('noModule' in t) && 'onbeforeload' in t) {
-          var n = !1;
-          e.addEventListener(
-            'beforeload',
-            function (e) {
-              if (e.target === t) n = !0;
-              else if (!e.target.hasAttribute('nomodule') || !n) return;
-              e.preventDefault();
-            },
-            !0
-          ),
-            (t.type = 'module'),
-            (t.src = '.'),
-            e.head.appendChild(t),
-            t.remove();
-        }
-      })();
-    </script>
+
+    <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
     <script nomodule crossorigin id="vite-legacy-polyfill" src="../../assets/polyfills-legacy--yCWUIwB.js"></script>
-    <script nomodule crossorigin id="vite-legacy-entry" data-src="../../assets/test-legacy-2l0GDQdv.js">
-      System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'));
-    </script>
+    <script nomodule crossorigin id="vite-legacy-entry" data-src="../../assets/test-legacy-2l0GDQdv.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
   </body>
 </html>
