@@ -5,14 +5,6 @@ import './styles/index.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode>{<App />}</React.StrictMode>);
 
-const baseUrl = import.meta.env.VITE_BASE_URL || '/';
-document.querySelectorAll('a').forEach((link) => {
-  const href = link.getAttribute('href');
-  if (href && href.startsWith('/') && !href.startsWith(baseUrl)) {
-    link.href = `${baseUrl}${href.slice(1)}`;
-  }
-});
-
 const focusButtons = document.querySelectorAll('.button-container-1, .button-container-2, .button-container-3');
 const mapPoints = document.querySelectorAll('.map-point') as NodeListOf<HTMLElement>;
 const mapPointContainer = document.querySelector('.regions__points') as HTMLElement;
