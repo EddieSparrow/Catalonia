@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import { ViteAliases } from 'vite-aliases';
 import legacy from '@vitejs/plugin-legacy';
 import pages from './vitejs/pages.config';
+import { resolve } from 'path';
 
 const pagesInput: { [key: string]: string } = {};
 
